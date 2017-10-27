@@ -94,7 +94,7 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('the loadFeed function is called and completes its work', function() {
+        it('has been loaded', function() {
             entries = $('.feed .entry').length;
             expect(entries).not.toBe(0);
         });
