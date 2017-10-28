@@ -51,20 +51,23 @@ $(function() {
         });
     });
 
-
+        // function getMenuHidden() {
+        //   return document.body.classList.contains('menu-hidden');
+        // }
     /* TODO: Write a new test suite named "The menu" */
      describe('The menu', function() {
 
-     	var Menu_Hidden = document.body.classList.contains('menu-hidden');
+     	// var Menu_Hidden = document.body.classList.contains('menu-hidden');
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
           it('is hidden by default', function() {
-            expect(Menu_Hidden).toBe(true);
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
         });
 
+        
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
@@ -73,9 +76,9 @@ $(function() {
           it('the menu changes visibility', function() {
             menuIcon = $('.menu-icon-link');
             menuIcon.trigger("click");
-            expect(Menu_Hidden).toBe(false);
+            expect(document.body.classList.contains('menu-hidden')).toBe(false);
             menuIcon.trigger("click");
-            expect(Menu_Hidden).toBe(true);
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
         });
      });
 
